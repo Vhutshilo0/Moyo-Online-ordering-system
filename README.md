@@ -31,21 +31,6 @@ Security	Spring Security, OAuth2/Keycloak	Vendor authentication
 Event Streaming	Kafka (planned), Outbox Pattern	Asynchronous event handling
 Frontend	React / HTML+JS (planned)	Admin and client-facing interfaces
 
-Project Structure
-moyo-oms/
-├── src/main/java/com/moyo/oms/
-│   ├── controller/        # REST Controllers
-│   ├── domain/            # JPA Entities (Order, OrderLine, Vendor, Inventory, Price, OutboxEvent)
-│   ├── dto/               # Data Transfer Objects (OrderCreatedEvent, etc.)
-│   ├── repository/        # Spring Data JPA Repositories
-│   ├── service/           # Business logic (AllocationService, etc.)
-│   └── config/            # Security, DB, and Kafka configuration
-├── src/main/resources/
-│   ├── application.yml    # Spring Boot configuration
-│   └── db/migration/      # Flyway migration scripts (V1__init.sql, etc.)
-├── Dockerfile             # Container configuration
-├── README.md              # Project documentation
-└── pom.xml                # Maven dependencies
 
 Database Schema
 
@@ -104,7 +89,7 @@ Start the application
 mvn spring-boot:run
 
 
-The API will be available at: http://localhost:8085
+
 
 Testing endpoints
 
